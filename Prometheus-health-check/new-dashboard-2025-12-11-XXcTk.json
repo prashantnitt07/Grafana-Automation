@@ -137,6 +137,6 @@
     },
     "timepicker": {},
     "timezone": "browser",
-    "title": "prometheus health check"
+    "title": "prometheus health check for target"
   }
 }
