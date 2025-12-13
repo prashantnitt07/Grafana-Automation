@@ -1,0 +1,63 @@
+{
+  "apiVersion": "dashboard.grafana.app/v1beta1",
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "prometheus-stats",
+    "folder": "Prometheus"
+  },
+  "spec": {
+    "title": "Prometheus Stats",
+    "description": "The official, pre-built Prometheus Stats Dashboard.",
+    "schemaVersion": 12,
+    "timezone": "browser",
+    "refresh": false,
+    "time": {
+      "from": "now-5m",
+      "to": "now"
+    },
+    "templating": {
+      "list": []
+    },
+    "annotations": {
+      "list": []
+    },
+    "links": [
+      {
+        "icon": "info",
+        "targetBlank": true,
+        "title": "Grafana Docs",
+        "type": "link",
+        "url": "http://www.grafana.org/docs"
+      },
+      {
+        "icon": "info",
+        "targetBlank": true,
+        "title": "Prometheus Docs",
+        "type": "link",
+        "url": "http://prometheus.io/docs/introduction/overview/"
+      }
+    ],
+    "rows": [
+      {
+        "title": "Overview",
+        "height": 178,
+        "panels": [
+          {
+            "type": "singlestat",
+            "title": "Uptime",
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "(time() - process_start_time_seconds{job=\"prometheus\"})",
+                "refId": "A"
+              }
+            ],
+            "format": "s",
+            "valueName": "current",
+            "span": 3
+          }
+        ]
+      }
+    ]
+  }
+}
