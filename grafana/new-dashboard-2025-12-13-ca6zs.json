@@ -24,7 +24,20 @@
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
-    "links": [],
+    "links": [
+      {
+        "asDropdown": false,
+        "icon": "external link",
+        "includeVars": false,
+        "keepTime": false,
+        "tags": [],
+        "targetBlank": true,
+        "title": "Source (GitHub)",
+        "tooltip": "View source file in repository",
+        "type": "link",
+        "url": "https://github.com/prashantnitt07/Grafana-Automation/blob/main/grafana/new-dashboard-2025-12-13-ca6zs.json"
+      }
+    ],
     "panels": [
       {
         "datasource": {
@@ -121,7 +134,7 @@
             "refId": "A"
           }
         ],
-        "title": "prometheus-up",
+        "title": "prometheus-up1",
         "type": "timeseries"
       }
     ],
